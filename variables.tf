@@ -13,9 +13,31 @@ variable "public_subnet_cidr_block" {
    type = string
    default = "10.0.1.0/24"
 }
+variable "release_s3_bucket_name" {
+   description = "The name of your S3 bucket that holds the releases"
+   type = string
+   default = "tutorial-application-bucket"
+}
+
+
+
+
 
 variable "my_ip" {
    description = "Your IP address"
    type = string
    sensitive = true
+}
+
+
+variable "application_name" {
+   description = "The name of your application in CodeDeploy"
+   type = string
+   default = "tutorial_application"
+}
+
+variable "deployment_group_name" {
+   description = "The name of your deployment group in CodeDeploy"
+   type = string
+   default = "tutorial_application_group"
 }
